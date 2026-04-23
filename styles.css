@@ -1,70 +1,50 @@
 body {
-  margin: 0;
-  font-family: Inter;
-  background: #0f0f1a;
-  color: white;
-  text-align: center;
+  margin:0;
+  font-family: sans-serif;
+  background:#0f0f1a;
+  color:white;
+  text-align:center;
 }
 
-/* INPUT MOBILE */
 .mega-input {
-  width: 90%;
-  height: 120px;
-  font-size: 4rem;
-  border-radius: 20px;
-  text-align: center;
-  margin: 20px auto;
+  width:90%;
+  height:120px;
+  font-size:4rem;
+  border-radius:20px;
+  text-align:center;
 }
 
-/* BOTÓN */
 button {
-  padding: 20px;
-  font-size: 1.2rem;
-  border-radius: 15px;
+  padding:20px;
+  font-size:1.2rem;
+  border-radius:15px;
 }
 
-/* PODIO */
+.leader-row { transition: all .5s ease; }
+.leader-row.up { transform: scale(1.05); }
+.leader-row.down { transform: scale(.95); opacity:.7; }
+
 .podium-screen {
-  position: fixed;
-  inset: 0;
-  background: black;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position:fixed;
+  inset:0;
+  background:black;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 
-.podium {
-  display: flex;
-  gap: 20px;
-  align-items: flex-end;
-}
+.podium { display:flex; gap:20px; align-items:flex-end; }
 
-.base {
-  width: 120px;
-}
-
-.first .base { height: 180px; background: gold; }
-.second .base { height: 140px; background: silver; }
-.third .base { height: 100px; background: brown; }
+.base { width:120px; }
+.first .base { height:180px; background:gold; }
+.second .base { height:140px; background:silver; }
+.third .base { height:100px; background:brown; }
 
 .podium-card {
-  background: white;
-  color: black;
-  padding: 10px;
-  border-radius: 15px;
-  margin-bottom: 10px;
-  transform: translateY(50px);
-  opacity: 0;
-}
-
-.first .podium-card { animation: rise 0.6s forwards 0.4s; }
-.second .podium-card { animation: rise 0.6s forwards 0.2s; }
-.third .podium-card { animation: rise 0.6s forwards 0.6s; }
-
-@keyframes rise {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  background:white;
+  color:black;
+  padding:10px;
+  border-radius:15px;
+  margin-bottom:10px;
 }
